@@ -1,6 +1,12 @@
-﻿生成启动时间为 2017/3/25 23:26:48。
+﻿生成启动时间为 2017/3/26 1:18:28。
      1>项目“C:\Users\xlnx\Desktop\maze\maze\maze\maze.vcxproj”在节点 2 上(Build 个目标)。
-     1>Link:
+     1>ClCompile:
+         D:\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\Users\xlnx\Desktop\labyrinth\labyrinth\include /IC:\Users\xlnx\Desktop\OGG\OGG\include /Zi /nologo /W3 /WX- /sdl /Ox /Ob2 /Oi /Ot /Oy /GT /GL /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt src\maze.c
+         maze.c
+     1>src\maze.c(7): warning C4273: “exit”: dll 链接不一致
+                 D:\Microsoft Visual Studio 12.0\VC\include\stdlib.h(376) : 参见“exit”的前一个定义
+     1>src\maze.c(102): warning C4013: “sscanf”未定义；假设外部返回 int
+       Link:
          D:\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\xlnx\Desktop\maze\maze\Release\maze.exe" /NOLOGO /LIBPATH:C:\Users\xlnx\Desktop\labyrinth\labyrinth\bin\Release /LIBPATH:"C:\Users\xlnx\Desktop\OGG\OGG\dependency\freeglut\glew-1.11.0\lib" /LIBPATH:C:\Users\xlnx\Desktop\OGG\OGG\dependency\freeglut\freeglut\lib /LIBPATH:C:\Users\xlnx\Desktop\OGG\OGG\bin\Release OGG.lib freeglut.lib labyrinth.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\xlnx\Desktop\maze\maze\Release\maze.pdb" /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\xlnx\Desktop\maze\maze\Release\maze.lib" /MACHINE:X86 /PROFILE /SAFESEH Release\maze.obj
          正在生成代码
          已完成代码的生成
@@ -9,4 +15,4 @@
 
 生成成功。
 
-已用时间 00:00:01.41
+已用时间 00:00:00.74
