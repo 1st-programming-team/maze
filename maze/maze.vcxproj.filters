@@ -18,5 +18,13 @@
     <ClCompile Include="src\maze.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="src\maze_control.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\maze_control.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

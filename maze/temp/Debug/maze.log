@@ -1,7 +1,12 @@
-﻿生成启动时间为 2017/3/26 10:59:03。
+﻿生成启动时间为 2017/3/26 17:52:43。
      1>项目“C:\Users\xlnx\Desktop\maze\maze\maze\maze.vcxproj”在节点 2 上(Build 个目标)。
-     1>Link:
+     1>ClCompile:
+         D:\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\Users\xlnx\Desktop\maze\maze\maze\dependency\labyrinth\labyrinth\include /IC:\Users\xlnx\Desktop\maze\maze\maze\dependency\OGG\OGG\include /IC:\Users\xlnx\Desktop\maze\maze\maze\include /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"C:\Users\xlnx\Desktop\maze\maze\maze\temp\Debug\\" /Fd"C:\Users\xlnx\Desktop\maze\maze\maze\temp\Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt /D _CRT_SECURE_NO_WARNINGS src\maze_control.c
+         maze_control.c
+     1>c:\users\xlnx\desktop\maze\maze\maze\src\maze_control.c(23): warning C4013: “memcpy”未定义；假设外部返回 int
+       Link:
          D:\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\xlnx\Desktop\maze\maze\maze\bin\Debug\maze.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\Users\xlnx\Desktop\maze\maze\maze\dependency\labyrinth\labyrinth\bin\Debug /LIBPATH:"C:\Users\xlnx\Desktop\maze\maze\maze\dependency\OGG\OGG\dependency\freeglut\glew-1.11.0\lib" /LIBPATH:C:\Users\xlnx\Desktop\maze\maze\maze\dependency\OGG\OGG\dependency\freeglut\freeglut\lib /LIBPATH:C:\Users\xlnx\Desktop\maze\maze\maze\dependency\OGG\OGG\bin\Debug OGG.lib freeglut.lib labyrinth.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\xlnx\Desktop\maze\maze\maze\bin\Debug\maze.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\xlnx\Desktop\maze\maze\maze\bin\Debug\maze.lib" /MACHINE:X86 /PROFILE C:\Users\xlnx\Desktop\maze\maze\maze\temp\Debug\maze.obj
+         C:\Users\xlnx\Desktop\maze\maze\maze\temp\Debug\maze_control.obj
      1>LINK : warning LNK4075: 忽略“/INCREMENTAL”(由于“/PROFILE”规范)
      1>maze.obj : warning LNK4075: 忽略“/EDITANDCONTINUE”(由于“/OPT:LBR”规范)
          maze.vcxproj -> C:\Users\xlnx\Desktop\maze\maze\maze\bin\Debug\maze.exe
@@ -9,4 +14,4 @@
 
 生成成功。
 
-已用时间 00:00:00.69
+已用时间 00:00:00.62
