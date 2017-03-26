@@ -1,0 +1,18 @@
+﻿生成启动时间为 2017/3/25 15:02:01。
+     1>项目“C:\Users\xlnx\Desktop\labyrinth\labyrinth\labyrinth.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         D:\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\Users\xlnx\Desktop\labyrinth\labyrinth\include /Zi /nologo /W3 /WX- /sdl /Ox /Ob2 /Oi /Ot /Oy /GT /GL /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"C:\Users\xlnx\Desktop\labyrinth\\labyrinth\temp\Release\\" /Fd"C:\Users\xlnx\Desktop\labyrinth\\labyrinth\temp\Release\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt src\utils\generate_union.c
+         generate_union.c
+       Lib:
+         D:\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"C:\Users\xlnx\Desktop\labyrinth\labyrinth\bin\Release\labyrinth.lib" /NOLOGO /LTCG C:\Users\xlnx\Desktop\labyrinth\\labyrinth\temp\Release\generate.obj
+         C:\Users\xlnx\Desktop\labyrinth\\labyrinth\temp\Release\generate_union.obj
+         C:\Users\xlnx\Desktop\labyrinth\\labyrinth\temp\Release\map.obj
+         C:\Users\xlnx\Desktop\labyrinth\\labyrinth\temp\Release\print.obj
+         C:\Users\xlnx\Desktop\labyrinth\\labyrinth\temp\Release\timestamp.obj
+         C:\Users\xlnx\Desktop\labyrinth\\labyrinth\temp\Release\weighted_algorithm.obj
+         labyrinth.vcxproj -> C:\Users\xlnx\Desktop\labyrinth\labyrinth\bin\Release\labyrinth.lib
+     1>已完成生成项目“C:\Users\xlnx\Desktop\labyrinth\labyrinth\labyrinth.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:02.41

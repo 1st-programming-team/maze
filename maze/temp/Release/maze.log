@@ -1,0 +1,12 @@
+﻿生成启动时间为 2017/3/26 10:59:07。
+     1>项目“C:\Users\xlnx\Desktop\maze\maze\maze\maze.vcxproj”在节点 2 上(Build 个目标)。
+     1>Link:
+         D:\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\xlnx\Desktop\maze\maze\maze\bin\Release\maze.exe" /NOLOGO /LIBPATH:C:\Users\xlnx\Desktop\maze\maze\maze\dependency\labyrinth\labyrinth\bin\Release /LIBPATH:"C:\Users\xlnx\Desktop\maze\maze\maze\dependency\OGG\OGG\dependency\freeglut\glew-1.11.0\lib" /LIBPATH:C:\Users\xlnx\Desktop\maze\maze\maze\dependency\OGG\OGG\dependency\freeglut\freeglut\lib /LIBPATH:C:\Users\xlnx\Desktop\maze\maze\maze\dependency\OGG\OGG\bin\Release OGG.lib freeglut.lib labyrinth.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\xlnx\Desktop\maze\maze\maze\bin\Release\maze.pdb" /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\xlnx\Desktop\maze\maze\maze\bin\Release\maze.lib" /MACHINE:X86 /PROFILE /SAFESEH C:\Users\xlnx\Desktop\maze\maze\maze\temp\Release\maze.obj
+         正在生成代码
+         已完成代码的生成
+         maze.vcxproj -> C:\Users\xlnx\Desktop\maze\maze\maze\bin\Release\maze.exe
+     1>已完成生成项目“C:\Users\xlnx\Desktop\maze\maze\maze\maze.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:00.62

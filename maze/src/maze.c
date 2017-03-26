@@ -1,10 +1,7 @@
 #define OGG_EXIT_STATUS
 #include <ogg.h>
 #include <labyrinth.h>
-#include <stdlib.h>
 //#include <stdio.h>
-
-extern void exit(int);
 
 # define green          ogg_make_color(6, 128, 67)
 # define light_green    ogg_make_color(174, 221, 129)
