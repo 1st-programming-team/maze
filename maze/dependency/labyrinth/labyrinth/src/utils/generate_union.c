@@ -54,37 +54,57 @@ static int cmp(const void* p, const void* q)
     return ((edge*)p)->w - ((edge*)q)->w;
 }
 
-static void init_labyrinth_walls(map *map, coordinate entrance_position, coordinate exit_position)
+static void init_labyrinth_walls(map *map)
 {
     const int width = map->width, height = map->height,
-        lowx = !(min(entrance_position.x, exit_position.x) + 1 & 1),
-        lowy = !(min(entrance_position.y, exit_position.y) + 1 & 1);
+        calc_width = (map->width + 1 & -2) - 1, calc_height = (map->height + 1 & -2) - 1;
 
     lookup = (int*)malloc(width * height * sizeof(int));
     pos_lookup = (int*)malloc(width * height * sizeof(int));
 
     int i, j; n = m = 0;
-    for (j = lowy; j < height; j += 2) {
-        int begin = j * width, end = (j + 1) * width;
-        for (i = !lowx + begin; i < end; i += 2) {      // breakable
+    for (j = 0; j < calc_height; j += 2) {
+        int begin = j * width, end = begin + calc_width;
+        for (i = begin + 1; i < end; i += 2) {      // breakable
             map->data[i].type = WALL;
             map->data[i].timestamp = EDGE_HORI; ++m;    // left-right
         }
-        for (i = lowx + begin; i < end; i += 2) {       // road
+        for (i = begin; i < end; i += 2) {       // road
             map->data[i].type = ROAD;
             lookup[i] = n; pos_lookup[n] = i; ++n;
         }
     }
-    for (j = !lowy; j < height; j += 2) {
-        int begin = j * width, end = (j + 1) * width;
-        for (i = lowx + begin; i < end; i += 2) {       // breakable
+    for (j = 1; j < calc_height; j += 2) {
+        int begin = j * width, end = begin + calc_width;
+        for (i = begin; i < end; i += 2) {       // breakable
             map->data[i].type = WALL;
             map->data[i].timestamp = EDGE_VERT; ++m;    // up-down
         }
-        for (i = !lowx + begin; i < end; i += 2) {      // unbreakable
+        for (i = begin + 1; i < end; i += 2) {      // unbreakable
             map->data[i].type = WALL;
             map->data[i].timestamp = 0;
         }
+    }
+    if (calc_width != width) {
+        int begin = calc_width, end = begin + calc_height * width;
+        for (i = begin; i < end; i += width * 2) {
+            map->data[i].type = ROAD;
+        }
+        for (i = begin + width; i < end + width; i += width * 2) {
+            map->data[i].type = WALL;
+        }
+    }
+    if (calc_height != height) {
+        int begin = calc_height * width, end = begin + calc_width;
+        for (i = begin; i < end; i += 2) {
+            map->data[i].type = ROAD;
+        }
+        for (i = begin + 1; i < end; i += 2) {
+            map->data[i].type = WALL;
+        }
+    }
+    if (calc_width != width && calc_height != height) {
+        map->data[width * height - 1].type = ROAD;
     }
 
     const int rand_size = 0x3fffffff / n;
@@ -109,25 +129,15 @@ static void init_labyrinth_walls(map *map, coordinate entrance_position, coordin
     }
     qsort(edges, m, sizeof(edge), cmp);
     set = create_union_find(n);
-    set_entrance(map, entrance_position);
-    set_exit(map, exit_position);
 }
 
 map *generate_union(int width, int height, coordinate entrance_position, coordinate exit_position)
 {
     map *labyrinth = create_empty_map(width, height);
-    init_labyrinth_walls(labyrinth, entrance_position, exit_position);
-
-    #ifdef __DEBUG_LESS
-    {
-        clock_t seed = clock();
-        seed = 187;
-        printf("WATCH HERE: %ld!!!!!!!!!!!!!!!!!!!\n", seed);
-        srand(seed);
-    }
-    #else
+    init_labyrinth_walls(labyrinth);
+    set_entrance(labyrinth, entrance_position);
+    set_exit(labyrinth, exit_position);
     srand(clock());
-    #endif
     int i = 0, cnt = 1;
     for (; cnt != n; ++i, ++cnt) {
         while (is_joint(set, edges[i].u, edges[i].v)) {

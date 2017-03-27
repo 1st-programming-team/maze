@@ -1,9 +1,6 @@
-﻿生成启动时间为 2017/3/26 17:53:31。
+﻿生成启动时间为 2017/3/27 18:08:40。
      1>项目“C:\Users\xlnx\Desktop\maze\maze\maze\maze.vcxproj”在节点 2 上(Build 个目标)。
-     1>ClCompile:
-         D:\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\Users\xlnx\Desktop\maze\maze\maze\dependency\labyrinth\labyrinth\include /IC:\Users\xlnx\Desktop\maze\maze\maze\dependency\OGG\OGG\include /IC:\Users\xlnx\Desktop\maze\maze\maze\include /Zi /nologo /W3 /WX- /sdl /Ox /Ob2 /Oi /Ot /Oy /GT /GL /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"C:\Users\xlnx\Desktop\maze\maze\maze\temp\Release\\" /Fd"C:\Users\xlnx\Desktop\maze\maze\maze\temp\Release\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt /D _CRT_SECURE_NO_WARNINGS src\maze_control.c
-         maze_control.c
-       Link:
+     1>Link:
          D:\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\xlnx\Desktop\maze\maze\maze\bin\Release\maze.exe" /NOLOGO /LIBPATH:C:\Users\xlnx\Desktop\maze\maze\maze\dependency\labyrinth\labyrinth\bin\Release /LIBPATH:"C:\Users\xlnx\Desktop\maze\maze\maze\dependency\OGG\OGG\dependency\freeglut\glew-1.11.0\lib" /LIBPATH:C:\Users\xlnx\Desktop\maze\maze\maze\dependency\OGG\OGG\dependency\freeglut\freeglut\lib /LIBPATH:C:\Users\xlnx\Desktop\maze\maze\maze\dependency\OGG\OGG\bin\Release OGG.lib freeglut.lib labyrinth.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\xlnx\Desktop\maze\maze\maze\bin\Release\maze.pdb" /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\xlnx\Desktop\maze\maze\maze\bin\Release\maze.lib" /MACHINE:X86 /PROFILE /SAFESEH C:\Users\xlnx\Desktop\maze\maze\maze\temp\Release\maze.obj
          C:\Users\xlnx\Desktop\maze\maze\maze\temp\Release\maze_control.obj
          正在生成代码
@@ -13,4 +10,4 @@
 
 生成成功。
 
-已用时间 00:00:00.87
+已用时间 00:00:00.61
