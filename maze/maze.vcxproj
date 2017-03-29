@@ -57,7 +57,7 @@
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(SolutionDir)maze\dependency\labyrinth\labyrinth\bin\Debug;$(SolutionDir)maze\dependency\OGG\OGG\dependency\freeglut\glew-1.11.0\lib;$(SolutionDir)maze\dependency\OGG\OGG\dependency\freeglut\freeglut\lib;$(SolutionDir)maze\dependency\OGG\OGG\bin\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>OGG.lib;freeglut.lib;labyrinth.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>OGG.lib;freeglut.lib;labyrinth.lib;glew32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <Profile>true</Profile>
     </Link>
   </ItemDefinitionGroup>
@@ -80,7 +80,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalLibraryDirectories>$(SolutionDir)maze\dependency\labyrinth\labyrinth\bin\Release;$(SolutionDir)maze\dependency\OGG\OGG\dependency\freeglut\glew-1.11.0\lib;$(SolutionDir)maze\dependency\OGG\OGG\dependency\freeglut\freeglut\lib;$(SolutionDir)maze\dependency\OGG\OGG\bin\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>OGG.lib;freeglut.lib;labyrinth.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>OGG.lib;freeglut.lib;labyrinth.lib;glew32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <Profile>true</Profile>
       <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
     </Link>
