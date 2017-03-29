@@ -1,4 +1,4 @@
-﻿生成启动时间为 2017/3/26 22:36:01。
+﻿生成启动时间为 2017/3/28 19:13:51。
      1>项目“C:\Users\xlnx\Desktop\labyrinth\labyrinth\labyrinth.vcxproj”在节点 2 上(Build 个目标)。
      1>ClCompile:
          D:\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\Users\xlnx\Desktop\labyrinth\labyrinth\include /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"C:\Users\xlnx\Desktop\labyrinth\\labyrinth\temp\Debug\\" /Fd"C:\Users\xlnx\Desktop\labyrinth\\labyrinth\temp\Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt src\utils\generate_union.c
@@ -15,4 +15,4 @@
 
 生成成功。
 
-已用时间 00:00:00.41
+已用时间 00:00:00.58

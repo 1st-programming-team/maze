@@ -2,39 +2,40 @@
 #include <time.h>
 #include "utils/generate_union.h"
 
-union_find *create_union_find(int size)
+union_find create_union_find(int size)
 {
-    union_find *this = (union_find*)malloc(sizeof(union_find));
-    this->pre = (int*)malloc(size * sizeof(union_find));
-    int i = 0, *p = this->pre, *end = p + size;
+    union_find this;
+    this = (union_find)malloc(size * sizeof(int));
+    int i = 0, *p = this, *end = p + size;
     for (; p != end; ++i, ++p) {
         *p = i;
     }
     return this;
 }
 
-void destroy_union_find(union_find *this)
+void destroy_union_find(union_find this)
 {
-    free(this->pre); free(this);
+    free(this);
 }
 
-int find_elem(union_find *this, int node)
+static int find_elem(int *pre, int node)
 {
-    while (this->pre[node] != node) {
-        node = this->pre[node];
+    register int branch = node;
+    while (pre[node] != node) {
+        node = pre[node];
+    }
+    register int temp = branch;
+    while ((branch = pre[branch]) != node) {
+        pre[temp] = node; temp = branch;
     }
     return node;
 }
 
-int is_joint(union_find *this, int s, int t)
-{
-    return find_elem(this, s) == find_elem(this, t);
-}
+# define is_joint(this, s, t)                                   \
+    (!(find_elem((this), (s)) - find_elem((this), (t))))
 
-void join_elem(union_find *this, int a, int b)
-{
-    this->pre[find_elem(this, a)] = find_elem(this, b);
-}
+# define join_elem(this, a, b)                                  \
+    ((this)[find_elem((this), (a))] = (this)[find_elem((this), (b))])
 
 typedef struct {
     int u, v, w;
@@ -44,7 +45,7 @@ static int n, m;
 static int *lookup;
 static int *pos_lookup;
 static edge *edges;
-static union_find *set;
+static union_find set;
 
 # define EDGE_VERT (1)
 # define EDGE_HORI (2)
@@ -90,7 +91,7 @@ static void init_labyrinth_walls(map *map)
         for (i = begin; i < end; i += width * 2) {
             map->data[i].type = ROAD;
         }
-        for (i = begin + width; i < end + width; i += width * 2) {
+        for (i = begin + width; i < end; i += width * 2) {
             map->data[i].type = WALL;
         }
     }
